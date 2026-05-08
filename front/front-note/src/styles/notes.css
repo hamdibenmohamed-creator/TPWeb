@@ -1,0 +1,180 @@
+/* GLOBAL FIX */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: #ffd700;
+}
+
+/* PAGE */
+.notes-page {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notes-header h2 {
+  margin: 0;
+}
+
+.logout-btn {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background: #c9302c;
+}
+
+/* CARD (FORM + NOTES) */
+.card,
+.note-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ffd700;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* FORM INPUTS */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+  background: transparent;
+  color: #ffd700;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #cccccc;
+}
+
+/* BUTTONS */
+button {
+  background: #ffd700;
+  color: black;
+  border: none;
+  padding: 10px 14px;
+  margin-right: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: white;
+}
+
+button.danger {
+  background: #d9534f;
+  color: white;
+}
+
+button.danger:hover {
+  background: #c9302c;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+.confirm-modal {
+  width: min(400px, 90%);
+  background: rgba(20, 20, 20, 0.98);
+  border: 1px solid #ffd700;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.confirm-modal h4 {
+  margin: 0 0 10px;
+  color: #ffd700;
+}
+
+.confirm-modal p {
+  margin: 0 0 20px;
+  color: #ddd;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* BADGES */
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.badge.low {
+  background: green;
+  color: white;
+}
+
+.badge.medium {
+  background: orange;
+  color: black;
+}
+
+.badge.high {
+  background: red;
+  color: white;
+}
+
+/* TEXT */
+p {
+  margin: 5px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .notes-page {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,14 @@
+composer create-project laravel/laravel back-note
+php artisan config:clear
+php artisan serve
+php artisan migrate  
+php artisan install:api
+php artisan route:list
+php artisan make:migration create_table_notes
+php artisan migrate
+php artisan make:model Note
+composer require laravel/sanctum
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+php artisan migrate
+php artisan migrate:fresh --seed  
+php artisan make:seeder DatabaseSeeder
